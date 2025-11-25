@@ -380,8 +380,7 @@
 
 <!-- =============================testimonial======================== -->
 <!-- Carousel Section -->
-<div
-    class="bg-black text-white flex flex-col items-center justify-center py-16">
+<div class="bg-black text-white flex flex-col items-center justify-center py-16">
     <h1 class="text-3xl md:text-4xl font-semibold mb-8 uppercase tracking-wide">What Our Clients Say</h1>
     <div class="slider relative w-[90%] max-w-[900px] h-[350px] overflow-hidden rounded-2xl border border-gray-800 shadow-lg backdrop-blur-sm bg-[#111]/80"
         data-aos="zoom-in-down">
@@ -480,8 +479,7 @@
 </div>
 
 <!-- ======================our team===========================  -->
-<div
-    class="mx-auto bg-black py-5 px-6 flex flex-col items-center justify-center">
+<div class="mx-auto bg-black py-5 px-6 flex flex-col items-center justify-center">
     <div class="text-center">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-white relative inline-block">
             Our Team
@@ -675,8 +673,7 @@
     </div>
 </div>
 <!-- ===============================let's talk=================================== -->
-<section
-    class="bg-black py-20 px-6 min-h-100 flex flex-col items-center justify-center">
+<section class="bg-black py-20 px-6 min-h-100 flex flex-col items-center justify-center">
     <div class="relative z-10 flex flex-col items-center">
         <!-- Headings -->
         <h4 class="text-gray-400 text-base font-semibold mb-5 flex items-center justify-center">
@@ -699,44 +696,124 @@
     </div>
 
     <!-- Modal -->
-    <div *ngIf="showModal" id="contactModal" (click)="closeIfOutside($event)"
-        class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
+    <!-- Contact Modal -->
+    <div *ngIf="showModal" (click)="closeIfOutside($event)"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+
         <div
-            class="bg-white rounded-2xl shadow-2xl w-[90%] max-w-md p-8 relative transform transition-all duration-300 scale-95 opacity-100">
+            class="bg-white w-[90%] max-w-lg rounded-2xl shadow-2xl p-8 relative transform transition-all duration-300 scale-100">
+
             <!-- Close Button -->
             <button (click)="closeModal()"
-                class="absolute top-3 right-3 text-gray-500 hover:text-[#470000] text-2xl transition-transform hover:scale-125">
+                class="absolute top-4 right-4 text-gray-500 hover:text-[#470000] text-2xl transition-transform hover:scale-125">
                 &times;
             </button>
 
             <!-- Heading -->
-            <h2 class="text-2xl font-bold text-[#470000] mb-6 text-center">Let's Talk</h2>
+            <h2 class="text-3xl font-bold text-[#470000] mb-6 text-center tracking-wide">
+                Let’s Talk
+            </h2>
 
             <!-- Contact Form -->
-            <form class="space-y-4">
-                <div>
-                    <label class="block text-gray-700 text-sm font-semibold mb-1">Full Name</label>
-                    <input type="text" placeholder="Enter your name"
-                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#470000] transition-all" />
-                </div>
+            <form class="space-y-2" (ngSubmit)="submitForm()" #contactForm="ngForm">
 
-                <div>
-                    <label class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
-                    <input type="email" placeholder="Enter your email"
-                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#470000] transition-all" />
-                </div>
+    <!-- Full Name -->
+    <div>
+        <label class="block text-gray-700 text-sm font-semibold mb-1">Full Name</label>
+        <input 
+            type="text" 
+            name="name" 
+            [(ngModel)]="form.name" 
+            placeholder="Enter your full name"
+            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
+        />
+    </div>
 
-                <div>
-                    <label class="block text-gray-700 text-sm font-semibold mb-1">Message</label>
-                    <textarea placeholder="Write your message..." rows="4"
-                        class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-[#470000] transition-all"></textarea>
-                </div>
+    <!-- Phone + Email in 2 Columns -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-                <button type="submit"
-                    class="w-full bg-[#470000] text-white font-semibold py-2 rounded-lg hover:bg-[maroon] transition-all shadow-md hover:shadow-lg">
-                    Send Message
-                </button>
-            </form>
+        <!-- Phone Number -->
+        <div>
+            <label class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
+            <input 
+                type="text" 
+                name="phone" 
+                [(ngModel)]="form.phone"
+                placeholder="Enter your phone number"
+                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
+            />
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
+            <input 
+                type="email" 
+                name="email" 
+                [(ngModel)]="form.email"
+                placeholder="Enter your email"
+                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
+            />
+        </div>
+
+    </div>
+
+    <!-- Platform Dropdown -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- Service Required -->
+        <div>
+            <label class="block text-gray-700 text-sm font-semibold mb-1">Service Required</label>
+            <select
+                name="service"
+                [(ngModel)]="form.service"
+                class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+                required
+            >
+                <option value="">Select Service</option>
+                <option value="Website Development">Website Development</option>
+                <option value="Search Engine Optimization">Search Engine Optimization</option>
+                <option value="Social Media Marketing">Social Media Marketing</option>
+                <option value="Graphics Designing">Graphics Designing</option>
+                <option value="PPC & Meta Ads">PPC & Meta Ads</option>
+            </select>
+        </div>
+
+        <!-- City -->
+        <div>
+            <label class="block text-gray-700 text-sm font-semibold mb-1">City</label>
+            <input 
+                type="text" 
+                name="city" 
+                [(ngModel)]="form.city"
+                placeholder="Enter your city name"
+                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
+            />
+        </div>
+
+    </div>
+
+    <!-- Message -->
+    <div>
+        <label class="block text-gray-700 text-sm font-semibold mb-1">Message</label>
+        <textarea 
+            rows="4"
+            name="message"
+            [(ngModel)]="form.message"
+            placeholder="Write your message..."
+            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+        ></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit"
+        class="w-full bg-[#470000] text-white font-semibold text-lg py-3 rounded-xl hover:bg-maroon transition-all shadow-md hover:shadow-lg">
+        Send Message
+    </button>
+
+</form>
+
         </div>
     </div>
+
 </section>

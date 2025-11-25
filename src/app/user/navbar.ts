@@ -10,8 +10,9 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./navbar.css']
 })
 export class NavbarComponent {
-  menuOpen = false;
-  dropdownOpen = false;
+  
+  menuOpen: boolean = false;      // For mobile menu
+  dropdownOpen: boolean = false;  // For dropdown menu (if any)
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;

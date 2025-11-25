@@ -1,17 +1,18 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './home.html',
   styleUrls: ['./home.css'],
 })
 export class HomeComponent implements OnInit {
-  showModal = false; // For Contact modal
-  selectedProject: any = null; // For Project Lightbox modal
+  showModal = false; 
+  selectedProject: any = null;
 
   projects = [
     {
@@ -53,7 +54,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  // Contact modal functions
+  // Contact Modal
   openModal() {
     this.showModal = true;
   }
@@ -76,5 +77,43 @@ export class HomeComponent implements OnInit {
 
   closeProject() {
     this.selectedProject = null;
+  }
+
+  // Form Object
+  form = {
+    name: "",
+    phone: "",
+    email: "",
+    service: "",
+    city: "",
+    message: ""
+  };
+
+  // Submit Form
+  submitForm() {
+    fetch("http://localhost:5000/api/user/add", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(this.form)
+    })
+      .then(res => res.json())
+      .then((data) => {
+        alert("Message sent successfully!");
+        console.log(data);
+
+        // Reset the form
+        this.form = {
+          name: "",
+          phone: "",
+          email: "",
+          service: "",
+          city: "",
+          message: ""
+        };
+
+        // Close modal
+        this.closeModal();
+      })
+      .catch(err => console.log(err));
   }
 }

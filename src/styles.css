@@ -2,6 +2,4 @@
 @import "tailwindcss";
 @import 'aos/dist/aos.css';
 
-html, body {
-  overflow-x: hidden !important;
-}
+
