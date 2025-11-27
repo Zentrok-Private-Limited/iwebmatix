@@ -78,14 +78,16 @@
       <h3
         class="text-white text-xl font-semibold mb-6 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[maroon]">
         Subscribe</h3>
-      <form class="relative overflow-hidden">
-        <input type="email" placeholder="Your email"
-          class="w-full py-3 px-7 bg-[#2E2E2E] border border-[#2E2E2E] text-white">
+      <form (submit)="onSubmit($event)" class="relative overflow-hidden">
+        <input type="email" placeholder="Your email" [(ngModel)]="email" name="email"
+          class="w-full py-3 px-7 bg-[#2E2E2E] border border-[#2E2E2E] text-white" required>
         <button type="submit"
           class="absolute top-0 right-0 py-3 px-5 bg-[maroon] border border-red-900 text-white hover:bg-red-900">
           <i class="fa-solid fa-paper-plane"></i>
         </button>
       </form>
+      <p *ngIf="message" class="mt-2 text-sm text-white">{{ message }}</p>
+
     </div>
   </div>
 
