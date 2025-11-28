@@ -4,16 +4,18 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class VisitService {
+
   private baseURL = 'http://localhost:5000/api';
 
   constructor(private http: HttpClient) {}
 
-  // Log visit (called once per session)
+  // Visiting user
   logVisit(): Observable<any> {
-    return this.http.post(`${this.baseURL}/visit`, { ip: 'auto' });
+    return this.http.post(`${this.baseURL}/visitor`, { ip: 'auto' });
   }
 
+  // Correct subscriber API (FIXED)
   subscribeEmail(email: string): Observable<any> {
-    return this.http.post(`${this.baseURL}/subscribe`, { email });
+    return this.http.post(`${this.baseURL}/subscribers`, { email });
   }
 }
