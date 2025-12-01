@@ -23,7 +23,7 @@
 <!-- ====================================================================================================== -->
 
 
-<section class="relative py-20 bg-black">
+<section class="relative py-20 bg-black overflow-x-hidden">
     <div class="container mx-auto px-6 md:px-12">
         <div class="flex flex-col md:flex-row items-center md:space-x-12">
 
@@ -81,7 +81,7 @@
 </section>
 
 <!-- ==============================service ======================= -->
-<section id="services" class="bg-black py-20 text-center">
+<section id="services" class="bg-black py-20 text-center overflow-hidden">
     <div class="max-w-[1320px] mx-auto">
         <!-- Header -->
         <div class="text-center mb-10">
@@ -155,87 +155,85 @@
 
 
 <!-- =======================Check our Specialities======================== -->
-<section class="bg-black py-20 px-6 text-center">
-    <div class="container mx-auto w-[90%] max-w-[1200px]">
-        <!-- Section Title -->
-        <h2 class="text-left text-white text-[1.5rem] font-semibold mb-16 flex items-center">
-            <span class="inline-block w-12 h-[2px] bg-white mr-3"></span>
-            Check our Specialities
-        </h2>
+<section class="bg-black py-20 px-6">
+  <div class="container mx-auto max-w-[1200px] text-center overflow-hidden">
 
-        <!-- Step Timeline -->
-        <div class="relative flex flex-wrap justify-center items-center gap-10">
+    <!-- Section Title -->
+    <h2 class="text-left text-white text-[1.5rem] font-semibold mb-16 flex items-center justify-center md:justify-start">
+      <span class="inline-block w-12 h-[2px] bg-white mr-3"></span>
+      Check our Specialities
+    </h2>
 
-            <!-- Connecting Line -->
-            <div class="absolute top-1/2 left-0 w-full h-[2px] bg-[#ffffff30] -z-10"></div>
+    <!-- Step Timeline -->
+    <div class="relative flex flex-wrap justify-center md:justify-between items-center gap-6 md:gap-10 ">
 
-            <!-- Step Card 1 -->
-            <div class="group border-t-4 border-[#800000] relative bg-gradient-to-t from-black/80 to-transparent text-black w-[260px] p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-3"
-                data-aos="fade-right">
-                <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
-                    Step 01
-                </div>
-                <h3 class="text-lg font-bold mb-3 mt-4 text-white group-hover:text-[#470000] transition-colors">Delivery
-                    Timing
-                </h3>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Proper inspection of a website with advanced tools before moving to the next stage.
-                </p>
-            </div>
+      <!-- Connecting Line -->
+      <div class="absolute top-1/2 left-0 w-full h-[2px] bg-[#ffffff30] -z-10 hidden md:block"></div>
 
-            <!-- Step Card 2 -->
-            <div class="group border-t-4 border-[#800000] relative bg-gradient-to-t from-black/80 to-transparent text-white w-[260px] p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-up">
-                <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
-                    Step 02
-                </div>
-                <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">Coding and
-                    Designing</h3>
-                <p class="text-gray-300 text-sm leading-relaxed">
-                    Optimize the website with advanced strategies to cover all functional and SEO needs.
-                </p>
-            </div>
-
-            <!-- Step Card 3 -->
-            <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white w-[260px] p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-down">
-                <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
-                    Step 03
-                </div>
-                <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">Stunning &
-                    Affordable</h3>
-                <p class="text-[#ccc] text-sm leading-relaxed">
-                    Expert data analysis to deploy refined strategies for consistent growth.
-                </p>
-            </div>
-
-            <!-- Step Card 4 -->
-            <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white w-[260px] p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
-                data-aos="fade-left">
-                <div
-                    class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
-                    Step 04
-                </div>
-                <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">Pricing and
-                    Packages</h3>
-                <p class="text-[#ccc] text-sm leading-relaxed">
-                    Implementing all final improvements and launching the optimized version.
-                </p>
-            </div>
-
+      <!-- Step Cards -->
+      <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white flex-1 min-w-[260px] max-w-[280px] p-6 md:p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-3"
+           data-aos="fade-right">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
+          Step 01
         </div>
+        <h3 class="text-lg font-bold mb-3 mt-4 text-white group-hover:text-[#470000] transition-colors">
+          Delivery Timing
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Proper inspection of a website with advanced tools before moving to the next stage.
+        </p>
+      </div>
+
+      <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white flex-1 min-w-[260px] max-w-[280px] p-6 md:p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
+           data-aos="fade-up">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
+          Step 02
+        </div>
+        <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">
+          Coding and Designing
+        </h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Optimize the website with advanced strategies to cover all functional and SEO needs.
+        </p>
+      </div>
+
+      <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white flex-1 min-w-[260px] max-w-[280px] p-6 md:p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
+           data-aos="fade-down">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
+          Step 03
+        </div>
+        <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">
+          Stunning & Affordable
+        </h3>
+        <p class="text-[#ccc] text-sm leading-relaxed">
+          Expert data analysis to deploy refined strategies for consistent growth.
+        </p>
+      </div>
+
+      <div class="group relative border-t-4 border-[#800000] bg-gradient-to-t from-black/80 to-transparent text-white flex-1 min-w-[260px] max-w-[280px] p-6 md:p-8 rounded-xl shadow-md hover:shadow-[#ffffff]/20 transition-all duration-300 hover:-translate-y-2"
+           data-aos="fade-left">
+        <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#470000] text-white font-bold text-sm px-4 py-1 rounded-full">
+          Step 04
+        </div>
+        <h3 class="text-lg font-bold mb-3 mt-4 group-hover:text-[#470000] transition-colors">
+          Pricing and Packages
+        </h3>
+        <p class="text-[#ccc] text-sm leading-relaxed">
+          Implementing all final improvements and launching the optimized version.
+        </p>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<!-- ============================ Blogging & Organization ========================= -->
-<section class="bg-black py-20 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
 
-        <!-- 🧩 Left Content -->
-        <div class="md:w-[48%] text-center md:text-left md:pl-[50px]">
+<!-- ============================ Blogging & Organization ========================= -->
+<section class="bg-black py-20 px-6 overflow-x-hidden">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+
+        <!-- Left Content -->
+        <div class="md:flex-1 text-center md:text-left px-4">
             <h2 class="text-4xl font-bold text-[#800000] mb-6 leading-snug">
                 Don’t Know How to Handle Social Media Platform Life? <br class="hidden md:block" /> We’ll Do It for You!
             </h2>
@@ -245,26 +243,24 @@
                 posting to growing your reach and results.
             </p>
 
-            <!-- CTA -->
             <a href="/provide"
                 class="inline-block bg-[#800000] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#a00000] transition-all duration-300">
                 Explore More
             </a>
         </div>
 
-        <!-- 🖼️ Right Image -->
-        <div class="md:w-[48%] flex justify-center md:pr-[50px]" data-aos="fade-left">
+        <!-- Right Image -->
+        <div class="md:flex-1 flex justify-center px-4" data-aos="fade-left">
             <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80"
                 alt="Elderly person getting video help"
-                class="rounded-full shadow-2xl border-4 border-white object-cover w-[90%] max-w-md hover:scale-105 transition-all duration-700" />
+                class="w-full max-w-[400px] rounded-full shadow-2xl border-4 border-white object-cover hover:scale-105 transition-all duration-700" />
         </div>
 
     </div>
 </section>
-
 <!-- ==================================== PORTFOLIO ================================ -->
 
-<section class="bg-black py-20 px-6 text-center relative">
+<section class="bg-black py-20 px-6 text-center relative overflow-x-hidden">
     <div class="absolute inset-0 bg-black/70"></div>
 
     <div class="max-w-7xl mx-auto relative z-10">
@@ -380,7 +376,7 @@
 
 <!-- =============================testimonial======================== -->
 <!-- Carousel Section -->
-<div class="bg-black text-white flex flex-col items-center justify-center py-16">
+<div class="bg-black text-white flex flex-col items-center justify-center py-16 overflow-x-hidden ">
     <h1 class="text-3xl md:text-4xl font-semibold mb-8 uppercase tracking-wide">What Our Clients Say</h1>
     <div class="slider relative w-[90%] max-w-[900px] h-[350px] overflow-hidden rounded-2xl border border-gray-800 shadow-lg backdrop-blur-sm bg-[#111]/80"
         data-aos="zoom-in-down">
@@ -440,7 +436,7 @@
     </div>
 </div>
 <!-- ======================logo marquee ================================ -->
-<div class="logo-marquee">
+<div class="logo-marquee bg-white overflow-x-hidden">
     <div class="logo-marquee--gradient"></div>
     <div class="logo-marquee--marquee">
         <div class="logo-marquee--marquee-group">
@@ -479,7 +475,7 @@
 </div>
 
 <!-- ======================our team===========================  -->
-<div class="mx-auto bg-black py-5 px-6 flex flex-col items-center justify-center">
+<div class="mx-auto bg-black py-5 px-6 flex flex-col items-center overflow-x-hidden justify-center">
     <div class="text-center">
         <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-white relative inline-block">
             Our Team
@@ -673,7 +669,7 @@
     </div>
 </div>
 <!-- ===============================let's talk=================================== -->
-<section class="bg-black py-20 px-6 min-h-100 flex flex-col items-center justify-center">
+<section class="bg-black py-20 px-6 min-h-100 flex flex-col items-center justify-center overflow-x-hidden">
     <div class="relative z-10 flex flex-col items-center">
         <!-- Headings -->
         <h4 class="text-gray-400 text-base font-semibold mb-5 flex items-center justify-center">
@@ -717,101 +713,73 @@
             <!-- Contact Form -->
             <form class="space-y-2" (ngSubmit)="submitForm()" #contactForm="ngForm">
 
-    <!-- Full Name -->
-    <div>
-        <label class="block text-gray-700 text-sm font-semibold mb-1">Full Name</label>
-        <input 
-            type="text" 
-            name="name" 
-            [(ngModel)]="form.name" 
-            placeholder="Enter your full name"
-            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
-        />
-    </div>
+                <!-- Full Name -->
+                <div>
+                    <label class="block text-gray-700 text-sm font-semibold mb-1">Full Name</label>
+                    <input type="text" name="name" [(ngModel)]="form.name" placeholder="Enter your full name"
+                        class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" />
+                </div>
 
-    <!-- Phone + Email in 2 Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Phone + Email in 2 Columns -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <!-- Phone Number -->
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
-            <input 
-                type="text" 
-                name="phone" 
-                [(ngModel)]="form.phone"
-                placeholder="Enter your phone number"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
-            />
-        </div>
+                    <!-- Phone Number -->
+                    <div>
+                        <label class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
+                        <input type="text" name="phone" [(ngModel)]="form.phone" placeholder="Enter your phone number"
+                            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" />
+                    </div>
 
-        <!-- Email -->
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
-            <input 
-                type="email" 
-                name="email" 
-                [(ngModel)]="form.email"
-                placeholder="Enter your email"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
-            />
-        </div>
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
+                        <input type="email" name="email" [(ngModel)]="form.email" placeholder="Enter your email"
+                            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" />
+                    </div>
 
-    </div>
+                </div>
 
-    <!-- Platform Dropdown -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Platform Dropdown -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <!-- Service Required -->
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">Service Required</label>
-            <select
-                name="service"
-                [(ngModel)]="form.service"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white focus:outline-none focus:border-[#470000] transition-all shadow-sm"
-                required
-            >
-                <option value="">Select Service</option>
-                <option value="Website Development">Website Development</option>
-                <option value="Search Engine Optimization">Search Engine Optimization</option>
-                <option value="Social Media Marketing">Social Media Marketing</option>
-                <option value="Graphics Designing">Graphics Designing</option>
-                <option value="PPC & Meta Ads">PPC & Meta Ads</option>
-            </select>
-        </div>
+                    <!-- Service Required -->
+                    <div>
+                        <label class="block text-gray-700 text-sm font-semibold mb-1">Service Required</label>
+                        <select name="service" [(ngModel)]="form.service"
+                            class="w-full border border-gray-300 rounded-xl px-4 py-3 bg-white focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+                            required>
+                            <option value="">Select Service</option>
+                            <option value="Website Development">Website Development</option>
+                            <option value="Search Engine Optimization">Search Engine Optimization</option>
+                            <option value="Social Media Marketing">Social Media Marketing</option>
+                            <option value="Graphics Designing">Graphics Designing</option>
+                            <option value="PPC & Meta Ads">PPC & Meta Ads</option>
+                        </select>
+                    </div>
 
-        <!-- City -->
-        <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">City</label>
-            <input 
-                type="text" 
-                name="city" 
-                [(ngModel)]="form.city"
-                placeholder="Enter your city name"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" 
-            />
-        </div>
+                    <!-- City -->
+                    <div>
+                        <label class="block text-gray-700 text-sm font-semibold mb-1">City</label>
+                        <input type="text" name="city" [(ngModel)]="form.city" placeholder="Enter your city name"
+                            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm" />
+                    </div>
 
-    </div>
+                </div>
 
-    <!-- Message -->
-    <div>
-        <label class="block text-gray-700 text-sm font-semibold mb-1">Message</label>
-        <textarea 
-            rows="4"
-            name="message"
-            [(ngModel)]="form.message"
-            placeholder="Write your message..."
-            class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
-        ></textarea>
-    </div>
+                <!-- Message -->
+                <div>
+                    <label class="block text-gray-700 text-sm font-semibold mb-1">Message</label>
+                    <textarea rows="4" name="message" [(ngModel)]="form.message" placeholder="Write your message..."
+                        class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"></textarea>
+                </div>
 
-    <!-- Submit Button -->
-    <button type="submit"
-        class="w-full bg-[#470000] text-white font-semibold text-lg py-3 rounded-xl hover:bg-maroon transition-all shadow-md hover:shadow-lg">
-        Send Message
-    </button>
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full bg-[#470000] text-white font-semibold text-lg py-3 rounded-xl hover:bg-maroon transition-all shadow-md hover:shadow-lg">
+                    Send Message
+                </button>
 
-</form>
+            </form>
 
         </div>
     </div>
