@@ -1,6 +1,40 @@
-* {
-  box-sizing: border-box;
+/* Main Desktop Height */
+.custom-video-section {
+  height: 100vh;
+  position: relative;
 }
+
+/* Video fill */
+.custom-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Tablet (Wix style height) */
+@media (max-width: 1024px) {
+  .custom-video-section {
+    height: 65vh !important;
+  }
+}
+
+/* Mobile height (Wix style) */
+@media (max-width: 768px) {
+  .custom-video-section {
+    height: 55vh !important;
+  }
+}
+
+/* Small mobile (extra fine-tuned like Wix) */
+@media (max-width: 480px) {
+  .custom-video-section {
+    height: 40vh !important;
+  }
+}
+
 @keyframes slide {
   0% { margin-left: 0%; }
   20% { margin-left: 0%; }
