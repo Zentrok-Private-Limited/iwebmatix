@@ -1,8 +1,14 @@
 <!-- 🖤 Top Contact Bar -->
 <div class="bg-black text-white text-sm py-2 px-4 flex justify-between items-center">
   <div class="hidden md:flex items-center space-x-4 text-xs">
-    <span class="text-xl">(+0)-000-0000-000</span>
-    <span class="text-xl">support@websitename.com</span>
+    <a href="tel:+0000000000">
+      <span class="text-xl">(+0)-000-0000-000</span>
+    </a>
+
+    <a href="mailto:support@websitename.com">
+      <span class="text-xl">support@websitename.com</span>
+    </a>
+
   </div>
 
   <div class="overflow-hidden whitespace-nowrap text-sm font-semibold">
@@ -12,11 +18,26 @@
   </div>
 
   <div class="hidden md:flex space-x-3 text-lg">
-    <i class="fab fa-whatsapp p-2 text-xl hover:text-green-600"></i>
-    <i class="fab fa-facebook-f p-2 hover:text-blue-900"></i>
-    <i class="fab fa-instagram p-2 hover:text-pink-500"></i>
-    <i class="fab fa-x-twitter p-2 hover:text-gray-200"></i>
-    <i class="fab fa-linkedin p-2 hover:text-blue-500"></i>
+    <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20know%20more" target="_blank">
+      <i class="fab fa-whatsapp p-2 text-xl hover:text-green-600"></i>
+    </a>
+
+
+    <a href="https://facebook.com/yourpage" target="_blank">
+      <i class="fab fa-facebook-f p-2 hover:text-blue-900"></i>
+    </a>
+
+    <a href="https://instagram.com/yourprofile" target="_blank">
+      <i class="fab fa-instagram p-2 hover:text-pink-500"></i>
+    </a>
+
+    <a href="https://twitter.com/yourprofile" target="_blank">
+      <i class="fab fa-x-twitter p-2 hover:text-gray-200"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">
+      <i class="fab fa-linkedin p-2 hover:text-blue-500"></i>
+    </a>
   </div>
 </div>
 
@@ -58,15 +79,10 @@
   </div>
 </nav>
 
-<a
-  routerLink="/contact"
-  class="fixed top-[250px] right-0 z-[1000000] bg-[#470000] 
+<a routerLink="/contact" class="fixed top-[250px] right-0 z-[1000000] bg-[#470000] 
          h-[120px] w-[30px] flex items-center justify-center 
-         rounded-l-md shadow-lg hover:bg-[maroon] transition-all duration-300 cursor-pointer"
->
-  <span
-    class="text-white text-sm font-semibold [writing-mode:vertical-rl] rotate-180 tracking-widest"
-  >
+         rounded-l-md shadow-lg hover:bg-[maroon] transition-all duration-300 cursor-pointer">
+  <span class="text-white text-sm font-semibold [writing-mode:vertical-rl] rotate-180 tracking-widest">
     Contact Us
   </span>
 </a>
