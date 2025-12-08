@@ -1,10 +1,11 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+// import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-service',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,],
   templateUrl: './service.html',
   styleUrls: ['./service.css']
 })
@@ -22,4 +23,5 @@ export class ServiceComponent implements OnInit {
       });
     }
   }
+  
 }

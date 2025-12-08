@@ -9,17 +9,73 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
   styleUrls: ['./provide.css']
 })
 export class ProvideComponent implements OnInit {
+
+  index = 0;
+  dots = [1, 2, 3];
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   async ngOnInit(): Promise<void> {
+
+    // AOS INITIALIZATION
     if (isPlatformBrowser(this.platformId)) {
-      // Dynamically import AOS only in the browser
       const AOS = (await import('aos')).default;
       AOS.init({
         duration: 1500,
         easing: 'ease-in-out',
         once: true,
       });
+    }
+
+    // AUTO SLIDE
+    this.autoSlide();
+  }
+
+  // -------------------------
+  // CAROUSEL FUNCTIONS
+  // -------------------------
+  autoSlide() {
+    if (isPlatformBrowser(this.platformId)) {
+      setInterval(() => this.nextSlide(), 4000);
+    }
+  }
+
+  nextSlide() {
+    this.index = (this.index + 1) % this.dots.length;
+    this.updateSlide();
+  }
+
+  prevSlide() {
+    this.index = (this.index - 1 + this.dots.length) % this.dots.length;
+    this.updateSlide();
+  }
+
+  goToSlide(i: number) {
+    this.index = i;
+    this.updateSlide();
+  }
+
+  updateSlide() {
+    if (isPlatformBrowser(this.platformId)) {
+      const carousel = document.getElementById('carousel');
+      if (carousel) {
+        carousel.style.transform = `translateX(-${this.index * 100}%)`;
+      }
+    }
+  }
+
+  // -------------------------
+  // SPEAKER ON/OFF FUNCTION
+  // -------------------------
+  toggleSound() {
+    if (isPlatformBrowser(this.platformId)) {
+      const video = document.getElementById("myVideo") as HTMLVideoElement;
+      const btn = document.getElementById("soundBtn") as HTMLElement;
+
+      if (video && btn) {
+        video.muted = !video.muted;
+        btn.innerHTML = video.muted ? "🔇" : "🔊";
+      }
     }
   }
 
