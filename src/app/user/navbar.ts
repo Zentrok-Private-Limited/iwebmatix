@@ -11,8 +11,8 @@ import { RouterLink } from '@angular/router';
 })
 export class NavbarComponent {
   
-  menuOpen: boolean = false;      // For mobile menu
-  dropdownOpen: boolean = false;  // For dropdown menu (if any)
+  menuOpen: boolean = false;
+  dropdownOpen: boolean = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -24,5 +24,10 @@ export class NavbarComponent {
 
   closeDropdown() {
     this.dropdownOpen = false;
+  }
+
+  // ⭐ NEW: Auto-close menu on link click
+  closeMenu() {
+    this.menuOpen = false;
   }
 }

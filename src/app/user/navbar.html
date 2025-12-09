@@ -70,11 +70,13 @@
     <!-- Mobile Menu -->
     <div [ngClass]="menuOpen ? 'block' : 'hidden'"
       class="md:hidden bg-white border-t border-gray-200 font-bold text-[#800000] text-center text-lg">
-      <a routerLink="/" class="block py-2 hover:text-red-700">Home</a>
-      <a routerLink="/about" class="block py-2 hover:text-red-700">About</a>
-      <a routerLink="/portfolio" class="hover:text-red-700">Portfolio</a>
-      <a routerLink="/service" class="block py-2 hover:text-red-700">Service</a>
-      <a routerLink="/contact" class="block py-2 hover:text-red-700">Contact</a>
+
+      <a routerLink="/" (click)="closeMenu()" class="block py-2 hover:text-red-700">Home</a>
+      <a routerLink="/about" (click)="closeMenu()" class="block py-2 hover:text-red-700">About</a>
+      <a routerLink="/portfolio" (click)="closeMenu()" class="block py-2 hover:text-red-700">Portfolio</a>
+      <a routerLink="/service" (click)="closeMenu()" class="block py-2 hover:text-red-700">Service</a>
+      <a routerLink="/contact" (click)="closeMenu()" class="block py-2 hover:text-red-700">Contact</a>
+
     </div>
   </div>
 </nav>

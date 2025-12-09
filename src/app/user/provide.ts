@@ -68,15 +68,23 @@ export class ProvideComponent implements OnInit {
   // SPEAKER ON/OFF FUNCTION
   // -------------------------
   toggleSound() {
-    if (isPlatformBrowser(this.platformId)) {
-      const video = document.getElementById("myVideo") as HTMLVideoElement;
-      const btn = document.getElementById("soundBtn") as HTMLElement;
+  if (isPlatformBrowser(this.platformId)) {
 
-      if (video && btn) {
-        video.muted = !video.muted;
-        btn.innerHTML = video.muted ? "🔇" : "🔊";
-      }
-    }
+    const deskVideo = document.getElementById("deskVideo") as HTMLVideoElement;
+    const mobileVideo = document.getElementById("mobileVideo") as HTMLVideoElement;
+    const btn = document.getElementById("soundBtn") as HTMLElement;
+
+    // Determine current mute status (any video)
+    const isMuted = deskVideo?.muted ?? mobileVideo?.muted ?? true;
+
+    // Toggle both videos
+    if (deskVideo) deskVideo.muted = !isMuted;
+    if (mobileVideo) mobileVideo.muted = !isMuted;
+
+    // Switch icon
+    btn.innerHTML = isMuted ? "🔊" : "🔇";
   }
+}
+
 
 }

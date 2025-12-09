@@ -71,21 +71,6 @@
     </div>
   </div>
 </section>
-
-<!-- <div class="bg-[#fffaf7] py-10 px-4 max-w-6xl mx-auto text-center">
-  <h2 class="text-4xl font-bold text-[#800000] mb-7">
-    We Help You Share Your Story — The Easy Way
-  </h2>
-  <p class="text-gray-600 max-w-2xl mx-auto">
-    Whether it’s a heartfelt birthday message, a touching family memory, or your own inspiring life story — we make
-    it simple for everyone, from kids to grandparents, to record, create, and share their most precious moments with
-    the people who matter most.
-
-    You don’t need any technical skills — just your emotions and your voice. We’ll help you capture your memories,
-    turn them into beautiful videos or slideshows, and share them effortlessly with your loved ones — making every
-    message unforgettable.
-  </p>
-</div> -->
 <section class="relative py-10 overflow-hidden">
   <div class="max-w-7xl mx-auto px-6 lg:px-12 grid md:grid-cols-2 gap-12 items-center">
 
@@ -195,6 +180,7 @@
     </div>
   </div>
 </section>
+
 <section class="bg-[#000] py-10">
   <div class="max-w-6xl mx-auto relative">
 
@@ -202,33 +188,53 @@
       border-4 border-[#800000] 
       shadow-[0_0_50px_rgba(128,0,0,0.5)] overflow-hidden">
 
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
+      <video id="destVideos" autoplay muted loop playsinline class="w-full h-full object-cover">
         <source src="3.mp4" type="video/mp4">
       </video>
     </div>
 
     <!-- VIDEO BOX -->
-    <div class="absolute top-1/2 right-4 -translate-y-1/2 
+    <div class="absolute hidden md:block top-1/2 right-4 -translate-y-1/2 
       w-[250px] h-[450px] bg-black rounded-3xl 
       border-4 border-[#800000] 
       shadow-[0_0_30px_rgba(128,0,0,0.5)] overflow-hidden">
 
-      <video id="myVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
+      <video id="deskVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
         <source src="20.mp4" type="video/mp4">
       </video>
     </div>
+<!-- SPEAKER BUTTON -->
+      <button id="soundBtn" (click)="toggleSound()"
+        class="fixed bottom-5 right-5 bg-black/60 text-white p-3 rounded-full border border-white z-50">
+        🔇
+      </button>
+  </div>
+</section>
 
-    <!-- SPEAKER BUTTON -->
-    <button id="soundBtn" (click)="toggleSound()" class="absolute top-[calc(50%-210px)] right-6 
-  bg-black/60 text-white p-2 rounded-full border border-white">
-      🔇
-    </button>
+<section class="bg-[#000] relative block lg:hidden  min-h-[400px]">
+  <div class="max-w-6xl mx-auto relative">
 
+    <!-- Mobile Only Video Box -->
+    <div class="absolute top-5 right-14
+             w-[210px] h-[380px] bg-black rounded-2xl
+             border-2 border-[#800000]
+             shadow-[0_0_20px_rgba(128,0,0,0.5)]
+             overflow-hidden">
+
+      <!-- VIDEO -->
+      <video id="mobileVideo" autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="20.mp4" type="video/mp4">
+      </video>
+
+    </div>
 
   </div>
 </section>
 
-<section class="bg-black py-10 px-6 flex justify-center">
+
+
+
+<section class="bg-black py-10 px-6 flex justify-center overflow-hidden">
   <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl w-full justify-items-center">
 
     <!-- CARD 1 – Premium -->
