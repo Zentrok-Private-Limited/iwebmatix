@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
   };
 
   submitForm() {
-    fetch("https://digital-backend-seven.vercel.app//api/user/add", {
+    fetch("https://digital-backend-seven.vercel.app/api/user/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.form)
