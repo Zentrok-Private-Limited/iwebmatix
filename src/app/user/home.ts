@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./home.css'],
 })
 export class HomeComponent implements OnInit {
-  showModal = false; 
+  showModal = false;
   selectedProject: any = null;
 
   projects = [
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
 
   async ngOnInit(): Promise<void> {
     if (isPlatformBrowser(this.platformId)) {
@@ -89,8 +89,13 @@ export class HomeComponent implements OnInit {
     message: ""
   };
 
-  // Submit Form
-  submitForm() {
+  submitForm(contactForm: any) {
+    // Check if form is valid and service is selected
+    if (!contactForm.valid || this.form.service === "") {
+      alert("Please fill all fields correctly!");
+      return;
+    }
+
     fetch("https://digital-backend-seven.vercel.app/api/user/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -102,6 +107,7 @@ export class HomeComponent implements OnInit {
         console.log(data);
 
         // Reset the form
+        contactForm.resetForm();
         this.form = {
           name: "",
           phone: "",
