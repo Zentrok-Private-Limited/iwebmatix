@@ -91,7 +91,7 @@ export class HomeComponent implements OnInit {
 
   // Submit Form
   submitForm() {
-    fetch("http://localhost:5000/api/user/add", {
+    fetch("https://digital-backend-seven.vercel.app/api/user/add", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.form)

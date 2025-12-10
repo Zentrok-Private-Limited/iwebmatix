@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({ providedIn: 'root' })
 export class VisitService {
 
-  private baseURL = 'http://localhost:5000/api';
+  private baseURL = 'https://digital-backend-seven.vercel.app/api';
 
   constructor(private http: HttpClient) {}
 
