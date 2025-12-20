@@ -1,5 +1,5 @@
 {
-  "name": "moon-marketing",
+  "name": "zentrok",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "tailwind:init": "tailwindcss init",
-    "serve:ssr:moon-marketing": "node dist/moon-marketing/server/server.mjs"
+    "serve:ssr:zentrok": "node dist/zentrok/server/server.mjs"
   },
   "prettier": {
     "printWidth": 100,
