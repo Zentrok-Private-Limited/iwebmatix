@@ -1,5 +1,5 @@
 <!-- 🖤 Top Contact Bar -->
-<div class="bg-black text-white text-sm py-2 px-4 flex justify-between items-center">
+<div class="bg-[#DDB15A] text-white text-sm py-2 px-4 flex justify-between items-center">
   <div class="hidden md:flex items-center space-x-4 text-xs">
     <a href="tel:+0000000000">
       <span class="text-xl">(+0)-000-0000-000</span>
@@ -13,7 +13,7 @@
 
   <div class="overflow-hidden whitespace-nowrap text-sm font-semibold">
     <div class="animate-marquee inline-block">
-      Welcome to <span class="text-[#800000] font-bold">ZENTROK.PVT.LTD</span> Best deals and offers available now.
+      Welcome to <span class="text-[#000] font-bold">ZENTROK.PVT.LTD</span> Best deals and offers available now.
     </div>
   </div>
 
@@ -44,7 +44,7 @@
 </div>
 
 <nav class="sticky top-0 w-full z-40">
-  <div class="bg-[#470000] shadow-md">
+  <div class="bg-[#000] shadow-md">
     <div class="flex items-center justify-between px-4">
       <!-- Logo -->
       <a routerLink="" class="flex items-center">
@@ -61,31 +61,31 @@
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex space-x-8 font-bold text-[#800000] text-base items-center">
-        <a routerLink="/" class="text-white hover:text-red-700">Home</a>
-        <a routerLink="/about" class="text-white hover:text-red-700">About</a>
-        <a routerLink="/portfolio" class="text-white hover:text-red-700">Portfolio</a>
-        <a routerLink="/service" class="text-white hover:text-red-700">Services</a>
-        <a routerLink="/contact" class="text-white hover:text-red-700">Contact</a>
+        <a routerLink="/" class="text-white hover:text-[#DDB15A]">Home</a>
+        <a routerLink="/about" class="text-white hover:text-[#DDB15A]">About</a>
+        <a routerLink="/portfolio" class="text-white hover:text-[#DDB15A]">Portfolio</a>
+        <a routerLink="/service" class="text-white hover:text-[#DDB15A]">Services</a>
+        <a routerLink="/contact" class="text-white hover:text-[#DDB15A]">Contact</a>
       </div>
     </div>
 
     <!-- Mobile Menu -->
     <div [ngClass]="menuOpen ? 'block' : 'hidden'"
-      class="md:hidden bg-white border-t border-gray-200 font-bold text-[#800000] text-center text-lg">
+      class="md:hidden bg-white border-t border-gray-200 font-bold text-[#000] text-center text-lg">
 
-      <a routerLink="/" (click)="closeMenu()" class="block py-2 hover:text-red-700">Home</a>
-      <a routerLink="/about" (click)="closeMenu()" class="block py-2 hover:text-red-700">About</a>
-      <a routerLink="/portfolio" (click)="closeMenu()" class="block py-2 hover:text-red-700">Portfolio</a>
-      <a routerLink="/service" (click)="closeMenu()" class="block py-2 hover:text-red-700">Service</a>
-      <a routerLink="/contact" (click)="closeMenu()" class="block py-2 hover:text-red-700">Contact</a>
+      <a routerLink="/" (click)="closeMenu()" class="block py-2 hover:text-[#DDB15A]">Home</a>
+      <a routerLink="/about" (click)="closeMenu()" class="block py-2 hover:text-[#DDB15A]">About</a>
+      <a routerLink="/portfolio" (click)="closeMenu()" class="block py-2 hover:text-[#DDB15A]">Portfolio</a>
+      <a routerLink="/service" (click)="closeMenu()" class="block py-2 hover:text-[#DDB15A]">Service</a>
+      <a routerLink="/contact" (click)="closeMenu()" class="block py-2 hover:text-[#DDB15A]">Contact</a>
 
     </div>
   </div>
 </nav>
 
-<a routerLink="/contact" class="fixed top-[250px] right-0 z-[1000000] bg-[#470000] 
+<a routerLink="/contact" class="fixed top-[250px] right-0 z-[1000000] bg-[#DDB15A] 
          h-[120px] w-[30px] flex items-center justify-center 
-         rounded-l-md shadow-lg hover:bg-[maroon] transition-all duration-300 cursor-pointer">
+         rounded-l-md shadow-lg hover:bg-[#cf8e0e] transition-all duration-300 cursor-pointer">
   <span class="text-white text-sm font-semibold [writing-mode:vertical-rl] rotate-180 tracking-widest">
     Contact Us
   </span>

@@ -41,7 +41,7 @@
   <div class="relative z-20 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
     <!-- Logo + Text -->
     <div>
-      <div class="items-center bg-[#800000] w-[15vw] px-4 py-2 rounded-tr-[25px]">
+      <div class="items-center">
         <img src="logo-zen.png" class="h-[20vh]" alt="">
       </div>
       <p class="text-gray-400 text-sm leading-7 mb-4">Turning ideas into impact with powerful digital marketing.</p>
@@ -69,29 +69,29 @@
     <!-- Footer Widget -->
     <div>
       <h3
-        class="text-white text-xl font-semibold mb-10 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[maroon]">
+        class="text-white text-xl font-semibold mb-10 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[#DDB15A]">
         Quick Links</h3>
       <ul class="flex flex-wrap">
-        <li class="w-1/2 mb-3"><a routerLink="" class="hover:text-[maroon] capitalize cursor-pointer">Home</a></li>
-        <li class="w-1/2 mb-3"><a routerLink="/about" class="hover:text-[maroon] capitalize cursor-pointer">About</a>
+        <li class="w-1/2 mb-3"><a routerLink="" class="hover:text-[#DDB15A] capitalize cursor-pointer">Home</a></li>
+        <li class="w-1/2 mb-3"><a routerLink="/about" class="hover:text-[#DDB15A] capitalize cursor-pointer">About</a>
         </li>
         <li class="w-1/2 mb-3"><a routerLink="/service"
-            class="hover:text-[maroon] capitalize cursor-pointer">Services</a></li>
+            class="hover:text-[#DDB15A] capitalize cursor-pointer">Services</a></li>
         <li class="w-1/2 mb-3"><a routerLink="/contact"
-            class="hover:text-[maroon] capitalize cursor-pointer">Contact</a></li>
+            class="hover:text-[#DDB15A] capitalize cursor-pointer">Contact</a></li>
       </ul>
     </div>
 
     <!-- Subscribe Form -->
     <div>
       <h3
-        class="text-white text-xl font-semibold mb-6 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[maroon]">
+        class="text-white text-xl font-semibold mb-6 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[#DDB15A]">
         Subscribe</h3>
       <form (submit)="onSubmit($event)" class="relative overflow-hidden">
         <input type="email" placeholder="Your email" [(ngModel)]="email" name="email"
           class="w-full py-3 px-7 bg-[#2E2E2E] border border-[#2E2E2E] text-white" required>
         <button type="submit"
-          class="absolute top-0 right-0 py-3 px-5 bg-[maroon] border border-red-900 text-white hover:bg-red-900">
+          class="absolute top-0 right-0 py-3 px-5 bg-[#DDB15A] border border-[#fff] text-white hover:bg-[#cf8e0e]">
           <i class="fa-solid fa-paper-plane"></i>
         </button>
       </form>
@@ -102,6 +102,6 @@
 
   <!-- Copyright -->
   <div class="bg-[#202020] py-6 text-center text-gray-400 text-sm">
-    <p>© 2025 Zentrok. All Rights Reserved. <a routerLink="#" class="text-[maroon]">Zentrok</a></p>
+    <p>© 2025 Zentrok. All Rights Reserved. <a routerLink="#" class="text-[#DDB15A]">Zentrok</a></p>
   </div>
 </footer>

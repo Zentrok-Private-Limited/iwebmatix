@@ -5,7 +5,7 @@
   <!-- Hero Text -->
   <div class="z-10 animate-fadeUp">
     <h1 class="text-4xl md:text-6xl font-bold mb-4">
-      <span class="text-red-700">PORTFOLIO</span>
+      <span class="text-[#DDB15A]">PORTFOLIO</span>
     </h1>
     <p class="text-gray-300 text-lg"> A glimpse of our successful digital marketing campaigns across SEO, Ads, and
       Social Media.</p>
@@ -26,8 +26,8 @@
     <!-- 🔍 Category Filters -->
     <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="200">
       <button *ngFor="let category of categories" (click)="filterCategory(category)"
-        [class.bg-[maroon]]="selectedCategory === category" [class.text-white]="selectedCategory === category"
-        class="border border-white/40 text-gray-200 hover:bg-[maroon] hover:text-white px-4 py-2 rounded-full transition-all duration-300">
+        [class.bg-[#DDB15A]]="selectedCategory === category" [class.text-white]="selectedCategory === category"
+        class="border border-white/40 text-gray-200 hover:bg-[#DDB15A] hover:text-white px-4 py-2 rounded-full transition-all duration-300">
         {{ category }}
       </button>
     </div>
@@ -35,7 +35,7 @@
     <!-- 🧩 Portfolio Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       <div *ngFor="let project of filteredProjects"
-        class="group relative bg-white/10 backdrop-blur-md border-t-4 border-[#800000] rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all duration-500 hover:border-[maroon]/50 hover:shadow-[#fff]/40"
+        class="group relative bg-white/10 backdrop-blur-md border-t-4 border-[#DDB15A] rounded-2xl shadow-lg overflow-hidden hover:scale-[1.02] transition-all duration-500 hover:border-[#DDB15A]/50 hover:shadow-[#fff]/40"
         data-aos="fade-up">
         <!-- Image -->
         <div class="relative overflow-hidden">
@@ -55,7 +55,7 @@
           </p>
 
           <button (click)="openProject(project)"
-            class="inline-flex items-center gap-2 bg-gradient-to-r from-[#470000] to-[maroon] text-white px-5 py-2 rounded-full font-medium hover:from-[maroon] hover:to-[#470000] transition-all duration-300">
+            class="inline-flex items-center gap-2 bg-gradient-to-r from-[#cf8e0e] to-[#DDB15A] text-white px-5 py-2 rounded-full font-medium hover:from-[#DDB15A] hover:to-[#cf8e0e] transition-all duration-300">
             View Case Study
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
               stroke="currentColor">
@@ -97,7 +97,7 @@
   routerLink="/contact"
   class="fixed top-[250px] right-0 z-[1000000] bg-[#470000] 
          h-[120px] w-[30px] flex items-center justify-center 
-         rounded-l-md shadow-lg hover:bg-[maroon] transition-all duration-300 cursor-pointer"
+         rounded-l-md shadow-lg hover:bg-[#DDB15A] transition-all duration-300 cursor-pointer"
 >
   <span
     class="text-white text-sm font-semibold [writing-mode:vertical-rl] rotate-180 tracking-widest"
