@@ -74,14 +74,14 @@
       class="bg-white rounded-2xl shadow-2xl w-[90%] max-w-2xl p-8 relative transform transition-all duration-300 scale-95 opacity-100"
       (click)="$event.stopPropagation()">
       <button (click)="closeProject()"
-        class="absolute top-3 right-3 text-gray-500 hover:text-[#470000] text-2xl transition-transform hover:scale-125">
+        class="absolute top-3 right-3 text-gray-500 hover:text-[#DDB15A] text-2xl transition-transform hover:scale-125">
         &times;
       </button>
 
       <img [src]="selectedProject.image" [alt]="selectedProject.title"
         class="w-full h-56 object-cover rounded-lg mb-6" />
 
-      <h2 class="text-2xl font-bold text-[#470000] mb-3">
+      <h2 class="text-2xl font-bold text-[#DDB15A] mb-3">
         {{ selectedProject.title }}
       </h2>
 
@@ -95,7 +95,7 @@
 
 <!-- <a
   routerLink="/contact"
-  class="fixed top-[250px] right-0 z-[1000000] bg-[#470000] 
+  class="fixed top-[250px] right-0 z-[1000000] bg-[#DDB15A] 
          h-[120px] w-[30px] flex items-center justify-center 
          rounded-l-md shadow-lg hover:bg-[#DDB15A] transition-all duration-300 cursor-pointer"
 >
