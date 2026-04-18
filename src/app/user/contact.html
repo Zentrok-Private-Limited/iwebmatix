@@ -56,141 +56,127 @@
     <li></li>
   </ul>
 </section>
-<section class="bg-black py-10 px-2 md:px-5">
+<section class="bg-black py-8 px-3 md:px-5">
 
-  <!-- Contact Form Card -->
-  <div data-aos="zoom-in-up" class="mx-auto w-full md:w-[85%] lg:w-[70%] max-w-5xl 
+  <div class="mx-auto w-full md:w-[85%] lg:w-[65%] max-w-4xl 
            bg-[#0f0f0f]/95 backdrop-blur-md text-gray-100 
-           rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 
-           border border-gray-800 transition-all duration-700 
-           hover:scale-[1.02] hover:shadow-[#fff]/40 animate-float">
+           rounded-2xl shadow-xl p-6 md:p-7 
+           border border-gray-800">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-7">
 
-      <!-- Left: Contact Form -->
-      <div class="flex flex-col justify-center">
-        <h1 class="text-2xl md:text-3xl font-bold mb-4 text-[#DDB15A] text-center">
+      <!-- LEFT: FORM -->
+      <div>
+
+        <h1 class="text-2xl font-bold mb-3 text-[#DDB15A] text-center">
           Contact Us
         </h1>
 
-        <p class="text-center text-gray-400 mb-6 text-sm md:text-base">
-          We'd love to hear from you! Fill out the form below.
+        <p class="text-center text-gray-400 mb-5 text-sm">
+          Quick connect with us
         </p>
 
-        <form class="space-y-1" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
+        <form class="space-y-3" (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
 
-          <!-- Full Name -->
+          <!-- NAME -->
           <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">Full Name</label>
-            <input type="text" name="name" [(ngModel)]="form.name" #name="ngModel" placeholder="Enter your full name"
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+            <input type="text" name="name" [(ngModel)]="form.name" #name="ngModel"
+              placeholder="Full Name"
+              class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
               required />
-            <small *ngIf="name.invalid && name.touched" class="text-red-600">Name is required</small>
+
+            @if (name.invalid && name.touched) {
+              <small class="text-red-500 text-xs">Required</small>
+            }
           </div>
 
-          <!-- Phone + Email -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- PHONE + EMAIL -->
+          <div class="grid grid-cols-2 gap-4">
 
             <div>
-              <label class="block text-gray-700 text-sm font-semibold mb-1">Phone Number</label>
               <input type="text" name="phone" [(ngModel)]="form.phone" #phone="ngModel"
-                placeholder="Enter your phone number"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+                placeholder="Phone"
+                class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
                 required pattern="[0-9]{10}" />
-              <small *ngIf="phone.invalid && phone.touched" class="text-red-600">
-                Enter a valid 10-digit phone number
-              </small>
+
+              @if (phone.invalid && phone.touched) {
+                <small class="text-red-500 text-xs">Invalid</small>
+              }
             </div>
 
             <div>
-              <label class="block text-gray-700 text-sm font-semibold mb-1">Email</label>
-              <input type="email" name="email" [(ngModel)]="form.email" #email="ngModel" placeholder="Enter your email"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
-                required email />
-              <small *ngIf="email.invalid && email.touched" class="text-red-600">Valid email required</small>
-            </div>
-
-          </div>
-
-          <!-- Service + City -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-            <div>
-              <label class="block text-gray-700 text-sm font-semibold mb-1">Service Required</label>
-              <select name="service" [(ngModel)]="form.service" #service="ngModel"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
-                required>
-                <option value="" class="text-black">Select Service</option>
-                <option value="Website Development" class="text-black">Website Development</option>
-                <option value="Search Engine Optimization" class="text-black">Search Engine Optimization</option>
-                <option value="Social Media Marketing" class="text-black">Social Media Marketing</option>
-                <option value="Graphics Designing" class="text-black">Graphics Designing</option>
-                <option value="PPC & Meta Ads" class="text-black">PPC & Meta Ads</option>
-              </select>
-              <small *ngIf="service.invalid && service.touched" class="text-red-600">Select a service</small>
-            </div>
-
-            <div>
-              <label class="block text-gray-700 text-sm font-semibold mb-1">City</label>
-              <input type="text" name="city" [(ngModel)]="form.city" #city="ngModel" placeholder="Enter your city name"
-                class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
+              <input type="email" name="email" [(ngModel)]="form.email" #email="ngModel"
+                placeholder="Email"
+                class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
                 required />
-              <small *ngIf="city.invalid && city.touched" class="text-red-600">City is required</small>
+
+              @if (email.invalid && email.touched) {
+                <small class="text-red-500 text-xs">Invalid</small>
+              }
             </div>
 
           </div>
 
-          <!-- Message -->
-          <div>
-            <label class="block text-gray-700 text-sm font-semibold mb-1">Message</label>
-            <textarea rows="4" name="message" [(ngModel)]="form.message" #message="ngModel"
-              placeholder="Write your message..."
-              class="w-full border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:border-[#470000] transition-all shadow-sm"
-              required></textarea>
-            <small *ngIf="message.invalid && message.touched" class="text-red-600">Message is required</small>
+          <!-- SERVICE + CITY -->
+          <div class="grid grid-cols-2 gap-4">
+
+            <select name="service" [(ngModel)]="form.service" #service="ngModel"
+              class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
+              required>
+              <option value="">Service</option>
+              <option>Website</option>
+              <option>SEO</option>
+              <option>Marketing</option>
+            </select>
+
+            <input type="text" name="city" [(ngModel)]="form.city" #city="ngModel"
+              placeholder="City"
+              class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
+              required />
+
           </div>
 
-          <!-- Submit Button -->
+          <!-- MESSAGE -->
+          <div>
+            <textarea rows="3" name="message" [(ngModel)]="form.message" #message="ngModel"
+              placeholder="Message"
+              class="w-full border rounded-lg px-4 py-2.5 bg-transparent text-sm focus:border-[#DDB15A]"
+              required></textarea>
+
+            @if (message.invalid && message.touched) {
+              <small class="text-red-500 text-xs">Required</small>
+            }
+          </div>
+
+          <!-- BUTTON -->
           <button type="submit"
-            class="w-full bg-[#DDB15A] text-white font-semibold text-lg py-3 rounded-xl hover:bg-[#cf8e0e] transition-all shadow-md hover:shadow-lg">
+            class="w-full bg-[#DDB15A] text-black text-sm py-2.5 rounded-lg hover:bg-[#cf8e0e] transition">
             Send Message
           </button>
 
         </form>
 
-
       </div>
 
+      <!-- RIGHT: INFO -->
+      <div class="bg-gradient-to-br from-[#1a1a1a] to-[#2b2b2b] p-6 rounded-xl flex flex-col justify-center">
 
-      <!-- Right: Contact Info -->
-      <div
-        class="relative bg-gradient-to-br from-[#1a1a1a] to-[#2b2b2b] text-gray-200 p-6 sm:p-8 rounded-xl border border-gray-800 shadow-inner flex flex-col justify-center mt-8 md:mt-0">
+        <h2 class="text-lg mb-4 text-[#DDB15A] font-semibold">Get in Touch</h2>
 
-        <h2 class="text-xl md:text-2xl font-semibold mb-3 text-[#DDB15A]">Get in Touch</h2>
-        <p class="text-sm md:text-base text-gray-400 mb-6">
-          You can also reach us via phone or visit our office.
-        </p>
+        <ul class="space-y-4 text-sm">
 
-        <ul class="space-y-3 text-sm md:text-base">
-          <li class="flex items-start sm:items-center">
-            <i class="fas fa-map-marker-alt text-[#DDB15A] mr-3 mt-1 sm:mt-0"></i>
-            Your Office Address
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-[#DDB15A]"></i>
+            <span>info@iwebmatix.com</span>
           </li>
-          <li class="flex items-start sm:items-center">
-            <i class="fas fa-phone text-[#DDB15A] mr-3 mt-1 sm:mt-0"></i>
-            +91 98765 43210
+
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-[#DDB15A]"></i>
+            <span>billing@iwebmatix.com</span>
           </li>
-          <li class="flex items-start sm:items-center">
-            <i class="fas fa-envelope text-[#DDB15A] mr-3 mt-1 sm:mt-0"></i>
-            contact@example.com
-          </li>
+
         </ul>
 
-        <div class="mt-6">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2050728280515!2d77.36404817550047!3d28.623615275669607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce544da5a9ebf%3A0x4024cbbabd66b412!2sKLJ%20Noida%20One!5e0!3m2!1sen!2sin!4v1762494797314!5m2!1sen!2sin"
-            class="w-full h-48 md:h-40 rounded-lg border-0 brightness-90 contrast-110" loading="lazy"></iframe>
-        </div>
       </div>
 
     </div>

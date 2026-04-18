@@ -1,108 +1,96 @@
-<!-- Footer Section -->
-<footer class="relative bg-[#151414] text-gray-400">
-  <!-- Footer CTA -->
-  <!-- ====== Contact Info Section (Left-Aligned & Responsive) ====== -->
-  <div class="border-b border-[#373636] py-8 flex flex-col sm:flex-row sm:justify-between gap-6">
+<footer class="bg-[#151414] text-gray-400">
 
-    <!-- Address -->
-    <div class="flex items-start space-x-4">
-      <i class="fa-solid fa-location-dot text-white text-xl ms-6 mt-1"></i>
-      <div>
-        <h4 class="text-white text-lg font-semibold">Address</h4>
-        <span class="text-gray-400 text-sm">Your Office address</span>
-      </div>
-    </div>
+  <!-- TOP CONTACT STRIP -->
+  <div class="border-b border-[#373636]">
+    <div class="max-w-7xl mx-auto px-6 py-6 grid grid-cols-1 sm:grid-cols-2 gap-6 text-center md:text-left">
 
-    <!-- Call Us -->
-    <div class="flex items-start space-x-4">
-      <i class="fa-solid fa-phone text-white text-xl ms-6 mt-1"></i>
-      <div>
-        <h4 class="text-white text-lg font-semibold">Call Us</h4>
-        <a href="tel:+0000000000">
-          <span class="text-gray-400 text-sm">(+91)-000-0000-000</span>
-        </a>
+      <!-- Email -->
+      <div class="flex items-center justify-center md:justify-start gap-3">
+        <i class="fa-solid fa-envelope text-[#DDB15A] text-lg"></i>
+        <div>
+          <p class="text-white text-sm font-semibold">Email</p>
+          <a href="mailto:info@iwebmatix.com" class="text-sm hover:text-[#DDB15A]">
+            info@iwebmatix.com
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Email -->
-    <div class="flex items-start space-x-4 me-5">
-      <i class="fa-solid fa-envelope text-white text-xl ms-6 mt-1 "></i>
-      <div>
-        <h4 class="text-white text-lg font-semibold">Email</h4>
-        <a href="mailto:support@websitename.com">
-          <span class="text-gray-400 text-sm">support@websitename.com</span>
-        </a>
+      <!-- Billing -->
+      <div class="flex items-center justify-center md:justify-start gap-3">
+        <i class="fa-solid fa-envelope text-[#DDB15A] text-lg"></i>
+        <div>
+          <p class="text-white text-sm font-semibold">Billing</p>
+          <a href="mailto:billing@iwebmatix.com" class="text-sm hover:text-[#DDB15A]">
+            billing@iwebmatix.com
+          </a>
+        </div>
       </div>
+
     </div>
   </div>
 
 
-  <!-- Footer Content -->
-  <div class="relative z-20 max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Logo + Text -->
-    <div>
-      <div class="items-center">
-        <!-- <img src="logo-zen.png" class="h-[20vh]" alt=""> -->
-        <h2 class="text-3xl font-bold text-white">iwebmatix</h2>
-      </div>
-      <p class="text-gray-400 text-sm leading-7 mb-4">Turning ideas into impact with powerful digital marketing.</p>
-      <div class="flex space-x-4">
-        <a href="https://wa.me/919876543210?text=Hello%20I%20want%20to%20know%20more" target="_blank"
-          class="bg-green-600 w-10 h-10 flex items-center justify-center rounded-full text-white hover:bg-white">
-          <i class="fab fa-whatsapp text-2xl p-2 hover:text-green-600"></i>
-        </a>
+  <!-- MAIN FOOTER -->
+  <div class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-10">
 
-        <a href="https://facebook.com/yourpage" target="_blank"
-          class="bg-blue-800 w-10 h-10 flex items-center justify-center rounded-full text-white hover:bg-white"><i
-            class="fab fa-facebook-f p-2 text-2xl hover:text-blue-700"></i></a>
-        <a href="https://instagram.com/yourprofile" target="_blank"
-          class="bg-pink-500 w-10 h-10 flex items-center justify-center rounded-full text-white hover:bg-white"><i
-            class="fab fa-instagram p-2 text-2xl hover:text-pink-500"></i></a>
-        <a href="https://twitter.com/yourprofile" target="_blank"
-          class="bg-black w-10 h-10 flex items-center justify-center rounded-full text-white hover:bg-white"><i
-            class="fab fa-x-twitter p-2 text-2xl hover:text-black"></i></a>
-        <a href="https://linkedin.com/in/yourprofile" target="_blank"
-          class="bg-blue-900 w-10 h-10 flex items-center justify-center rounded-full text-white hover:bg-white"><i
-            class="fab fa-linkedin p-2 text-2xl hover:text-blue-900"></i></a>
-      </div>
+    <!-- LOGO + ABOUT -->
+    <div>
+      <h2 class="text-2xl font-bold text-white mb-3">iWebmatix</h2>
+      <p class="text-sm leading-6">
+        Turning ideas into impact with powerful digital marketing solutions.
+      </p>
     </div>
 
-    <!-- Footer Widget -->
+
+    <!-- QUICK LINKS -->
     <div>
-      <h3
-        class="text-white text-xl font-semibold mb-10 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[#DDB15A]">
-        Quick Links</h3>
-      <ul class="flex flex-wrap">
-        <li class="w-1/2 mb-3"><a routerLink="" class="hover:text-[#DDB15A] capitalize cursor-pointer">Home</a></li>
-        <li class="w-1/2 mb-3"><a routerLink="/about" class="hover:text-[#DDB15A] capitalize cursor-pointer">About</a>
-        </li>
-        <li class="w-1/2 mb-3"><a routerLink="/service"
-            class="hover:text-[#DDB15A] capitalize cursor-pointer">Services</a></li>
-        <li class="w-1/2 mb-3"><a routerLink="/contact"
-            class="hover:text-[#DDB15A] capitalize cursor-pointer">Contact</a></li>
+      <h3 class="text-white text-lg font-semibold mb-4 border-b border-[#373636] pb-2">
+        Quick Links
+      </h3>
+
+      <ul class="space-y-2 text-sm">
+        <li><a routerLink="" class="hover:text-[#DDB15A]">Home</a></li>
+        <li><a routerLink="/about" class="hover:text-[#DDB15A]">About</a></li>
+        <li><a routerLink="/service" class="hover:text-[#DDB15A]">Services</a></li>
+        <li><a routerLink="/contact" class="hover:text-[#DDB15A]">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Subscribe Form -->
+
+    <!-- SUBSCRIBE -->
     <div>
-      <h3
-        class="text-white text-xl font-semibold mb-6 relative after:absolute after:left-0 after:bottom-[-15px] after:h-0.5 after:w-12 after:bg-[#DDB15A]">
-        Subscribe</h3>
-      <form (submit)="onSubmit($event)" class="relative overflow-hidden">
-        <input type="email" placeholder="Your email" [(ngModel)]="email" name="email"
-          class="w-full py-3 px-7 bg-[#2E2E2E] border border-[#2E2E2E] text-white" required>
+      <h3 class="text-white text-lg font-semibold mb-4 border-b border-[#373636] pb-2">
+        Subscribe
+      </h3>
+
+      <form (submit)="onSubmit($event)" class="flex">
+
+        <input type="email" [(ngModel)]="email" name="email"
+          placeholder="Enter your email"
+          class="flex-1 px-4 py-2 bg-[#2E2E2E] border border-[#2E2E2E] text-sm outline-none">
+
         <button type="submit"
-          class="absolute top-0 right-0 py-3 px-5 bg-[#DDB15A] border border-[#fff] text-white hover:bg-[#cf8e0e]">
+          class="px-4 bg-[#DDB15A] text-black hover:bg-[#cf8e0e] transition">
           <i class="fa-solid fa-paper-plane"></i>
         </button>
+
       </form>
-      <p *ngIf="message" class="mt-2 text-sm text-white">{{ message }}</p>
+
+      @if (message) {
+        <p class="mt-2 text-xs text-white">{{ message }}</p>
+      }
 
     </div>
+
   </div>
 
-  <!-- Copyright -->
-  <div class="bg-[#202020] py-6 text-center text-gray-400 text-sm">
-    <p>© 2025 iwebmatix. All Rights Reserved. <a routerLink="#" class="text-[#DDB15A]">iwebmatix</a></p>
+
+  <!-- COPYRIGHT -->
+  <div class="bg-[#202020] py-4 text-center text-sm">
+    <p>
+      © 2026 iWebmatix. All Rights Reserved.
+      <span class="text-[#DDB15A]">iWebmatix</span>
+    </p>
   </div>
+
 </footer>
